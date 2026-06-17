@@ -68,7 +68,7 @@ CSE_HW = [
 CSE_APP_DIGITAL = [
     ("NETGEAR IQ","1206386835",None),
     ("New NETGEAR App \u2013 Orbi Smart Home","950993231","Smart Home"),
-    ("New NETGEAR App \u2013 Armor","950993231","Armor"),
+    ("New NETGEAR App \u2013 Armor","1537572878","Armor"),
     ("New NETGEAR App \u2013 M7 & M7 Telstra","950993231","M7"),
     ("New NETGEAR App \u2013 NS300","950993231","NS300"),
     ("New NETGEAR App \u2013 M8","950993231","M8"),
@@ -87,7 +87,7 @@ MP_PROJECTS = [
     ("MH7110-111APS (M7 APS)","1026622358",None),
     ("MH7110-111EUS (M7 EU/EMEA)","767688814",None),
     ("MH7110-1TLAUS (M7 Telstra)","1282146367",None),
-    ("NS310-111EUS","286098586","NS310-111EUS"),
+    ("NS310-111EUS","1509523515","NS310-111EUS"),
     ("NS310-111PAS","1332674561",None),
     ("NS300-100EUS","1344700434",None),
     ("NS300-100PAS","1344340004",None),

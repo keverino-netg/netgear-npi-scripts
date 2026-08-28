@@ -1,0 +1,14 @@
+{
+  "name": "zenith-schedule-deck",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Builds the NETGEAR Zenith ENG schedule deck (Orbi brand) from schedule data.",
+  "scripts": {
+    "build": "node build_deck.js",
+    "render": "./render.sh"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "pptxgenjs": "^3.12.0"
+  }
+}

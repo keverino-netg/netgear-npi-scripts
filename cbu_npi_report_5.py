@@ -51,19 +51,16 @@ SW_LABEL_MAP = {
 REGIONAL_SUFFIXES = (" - eu"," - aus"," - na","-eu","-aus","-na"," eu"," aus")
 
 CSE_HW = [
-    ("Project Nova - Best","925794307","Project Nova - Best"),
-    ("WiFi 8 \u2013 Nova","925794307",None),
+    ("WiFi 8 \u2013 Nova Best","1987379223",None),
+    ("WiFi 8 \u2013 Nova Better","1756135425",None),
+    ("WiFi 8 \u2013 Nova Good","1756135476",None),
+    ("WiFi 8 \u2013 Orin Best","2107244545",None),
     ("WiFi 7 \u2013 RBE973 Refresh","1338048529",None),
-    ("Outdoor Extender","1368457405",None),
-    ("Wifi7 RBE300Y (Outdoor Orbi)","934969345",None),
+    ("EXS300Y Outdoor Extender","1368457405",None),
     ("Project Zenith RBE78x (Smarthome)","945127425",None),
     ("EAX17 Derivative SKU","1052246023","EAX17",HW_PRE_FAI_COLS),
     ("EXS27-100PES","1187053599","EXS27",HW_PRE_FAI_COLS),
     ("EXS27-100UKS","1187053599","EXS27",HW_PRE_FAI_COLS),
-    ("Orbi RBE770v2","934806258","RBE770"),
-    ("RBE77x v2 \u2013 NAS","934806258","RBE770"),
-    ("RBE77x v2 \u2013 RBE773-100EUS","934806258","RBE770"),
-    ("RBE77x v2 \u2013 RBE773-100APS","934806258","RBE770"),
 ]
 CSE_APP_DIGITAL = [
     ("NETGEAR IQ","1206386835",None),
@@ -471,7 +468,7 @@ def build_dashboard_adf(page_docs):
     content.append({"type":"paragraph","content":[
         txt("Generated: ",bold=True),txt(today_str+"   \u00b7   "),
         txt("See full milestone table: ",bold=True),
-        txt("CBU NPI Milestone Report",url=f"{CONFLUENCE_BASE}/wiki/rest/api/content/{REPORT_PAGE_ID}"),
+        txt("CBU NPI Milestone Report",url=f"{CONFLUENCE_BASE}/wiki/spaces/CPAPM/pages/{REPORT_PAGE_ID}"),
         txt("   \u00b7   Milestone data sourced live from each project's Confluence page.")]})
     SECTIONS=[
         ("HW Projects \u2013 NA (CSE Space)",CSE_HW,HW_LABEL_MAP,HW_COLUMNS,CSE),
@@ -542,7 +539,7 @@ def serialize_milestones(milestones):
     """Convert int keys to strings for JSON serialization."""
     return {str(k): v for k,v in milestones.items()}
 
-def export_json(page_docs, output_path=os.path.expanduser("~/scripts/cbu_npi_data.json")):
+def export_json(page_docs, output_path=os.path.join(os.path.dirname(os.path.abspath(__file__)),"cbu_npi_data.json")):
     """Export all milestone data to a JSON file for use with the HTML report."""
     SECTIONS=[
         {"label":"HW Projects \u2013 NA (CSE Space)","registry":CSE_HW,"url_prefix":CSE,
@@ -591,7 +588,7 @@ def main():
     json_path=next((sys.argv[sys.argv.index("--export-json")+1]
                     for i,a in enumerate(sys.argv) if a=="--export-json" and i+1<len(sys.argv)
                     and not sys.argv[i+1].startswith("-")),
-                   os.path.expanduser("~/scripts/cbu_npi_data.json")) if "--export-json" in sys.argv else os.path.expanduser("~/scripts/cbu_npi_data.json")
+                   os.path.join(os.path.dirname(os.path.abspath(__file__)),"cbu_npi_data.json")) if "--export-json" in sys.argv else os.path.join(os.path.dirname(os.path.abspath(__file__)),"cbu_npi_data.json")
 
     email=os.environ.get("ATLASSIAN_EMAIL","kevin.driscoll@netgear.com")
     token=os.environ.get("ATLASSIAN_API_TOKEN","")

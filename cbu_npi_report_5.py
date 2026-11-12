@@ -77,20 +77,11 @@ CSE_APP_DIGITAL = [
     ("Insight Pro (Mobile SW)","996474990","Insight Pro"),
 ]
 MP_PROJECTS = [
-    ("MH7150-100EUS","205685244","MH7150"),
-    ("MH7150-100PAS","205685244","MH7150"),
-    ("MH7150-100APS","205685244","MH7150"),
-    ("MH7110-111PAS (M7 PAS)","1025474959",None),
-    ("MH7110-111APS (M7 APS)","1026622358",None),
-    ("MH7110-111EUS (M7 EU/EMEA)","767688814",None),
-    ("MH7110-1TLAUS (M7 Telstra)","1282146367",None),
-    ("NS310-111EUS","1509523515","NS310-111EUS"),
-    ("NS310-111PAS","1332674561",None),
-    ("NS300-100EUS","1344700434",None),
-    ("NS300-100PAS","1344340004",None),
     ("MR8400-1A1NAS (M8 Pro ATT)","499351616",None),
+    ("MR8400-1TLAUS (M8 Pro Telstra)","1736835164",None),
+    ("MR8450-100EUS (M8 Pro EU Retail)","1418068005",None),
+    ("MR8450-100PAS (M8 Pro Retail Americas)","1736573043",None),
     ("Lifeline-5G","928743485",None),
-    ("MX - Low-cost Mobile","1108869650",None),
 ]
 FW_SDK = [
     ("NextGear OS","977109069",None,False),
